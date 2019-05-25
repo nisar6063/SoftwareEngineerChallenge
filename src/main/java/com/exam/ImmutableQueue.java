@@ -47,7 +47,7 @@ public final class ImmutableQueue<T> implements Queue<T> {
     }
 
     public final boolean isEmpty() {
-        return false;
+        return forwards.isEmpty() && backwards.isEmpty();
     }
 
     private static final class EmptyQueue<T> implements Queue<T> {
